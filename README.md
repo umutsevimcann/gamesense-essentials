@@ -31,7 +31,10 @@
 
 ## Screenshots
 
-![Modern UI Screenshot](https://user-images.githubusercontent.com/7511094/122837368-3e0fad00-d2f4-11eb-868e-980b2b29e1c1.mp4)
+![Screenshot 1](screenshot/1.png)
+![Screenshot 2](screenshot/2.png)
+![Screenshot 3](screenshot/3.png)
+![Screenshot 4](screenshot/4.png)
 
 ---
 
