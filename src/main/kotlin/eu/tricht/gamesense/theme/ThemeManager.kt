@@ -24,6 +24,36 @@ object ThemeManager {
     val predefinedThemes = mapOf(
         "light" to defaultLightTheme,
         "dark" to defaultDarkTheme,
+        "win11" to mapOf(
+            "background" to Color(243, 243, 247),
+            "foreground" to Color(31, 31, 31),
+            "highlight" to Color(0, 120, 212),
+            "secondary" to Color(222, 228, 239)
+        ),
+        "purple" to mapOf(
+            "background" to Color(240, 235, 250),
+            "foreground" to Color(60, 30, 90),
+            "highlight" to Color(120, 60, 200),
+            "secondary" to Color(200, 180, 230)
+        ),
+        "orange" to mapOf(
+            "background" to Color(255, 245, 230),
+            "foreground" to Color(120, 60, 0),
+            "highlight" to Color(255, 140, 0),
+            "secondary" to Color(255, 210, 150)
+        ),
+        "red" to mapOf(
+            "background" to Color(250, 230, 230),
+            "foreground" to Color(120, 0, 0),
+            "highlight" to Color(220, 40, 40),
+            "secondary" to Color(255, 180, 180)
+        ),
+        "gray" to mapOf(
+            "background" to Color(230, 230, 230),
+            "foreground" to Color(60, 60, 60),
+            "highlight" to Color(120, 120, 120),
+            "secondary" to Color(180, 180, 180)
+        ),
         "blue" to mapOf(
             "background" to Color(225, 235, 245),
             "foreground" to Color(30, 30, 90),
@@ -47,6 +77,18 @@ object ThemeManager {
             "foreground" to Color(220, 250, 220),
             "highlight" to Color(80, 200, 80),
             "secondary" to Color(60, 120, 60)
+        ),
+        "turquoise" to mapOf(
+            "background" to Color(230, 250, 250),
+            "foreground" to Color(20, 80, 90),
+            "highlight" to Color(0, 180, 170),
+            "secondary" to Color(150, 230, 230)
+        ),
+        "dark_turquoise" to mapOf(
+            "background" to Color(20, 40, 45),
+            "foreground" to Color(220, 250, 250),
+            "highlight" to Color(0, 210, 200),
+            "secondary" to Color(60, 130, 140)
         )
     )
     
@@ -59,11 +101,28 @@ object ThemeManager {
     
     fun initialize(prefs: Preferences) {
         preferences = prefs
-        isDarkMode = preferences!!.getBoolean("darkMode", false)
+        detectSystemTheme() // Sistem temasını algıla ve uygula
+        isDarkMode = preferences!!.getBoolean("darkMode", isDarkMode)
         currentThemeKey = preferences!!.get("themeKey", if (isDarkMode) "dark" else "light") ?: "light"
         
         // Özelleştirilmiş renkleri yükle
         loadCustomColors()
+    }
+    
+    // Windows sistem temasını algıla ve uygula
+    fun detectSystemTheme() {
+        try {
+            val process = Runtime.getRuntime().exec(arrayOf("reg", "query", "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize", "/v", "AppsUseLightTheme"))
+            val reader = process.inputStream.bufferedReader()
+            val output = reader.readText()
+            reader.close()
+            process.waitFor()
+            val isLight = output.contains("REG_DWORD") && output.trim().endsWith("0x1")
+            isDarkMode = !isLight
+        } catch (e: Exception) {
+            // Hata olursa varsayılan açık modda kal
+            isDarkMode = false
+        }
     }
     
     fun getCurrentTheme(): Map<String, Color> {

@@ -69,3 +69,14 @@ Pull requests, translations, and feature suggestions are welcome!
 ## Contact
 - [GitHub Issues](https://github.com/umutsevimcann/gamesense-essentials/issues)
 - [Original Project](https://github.com/mtricht/gamesense-essentials)
+
+---
+
+## What's New (v1.16.0)
+
+- **Multi-language support improved:** All clock/date options and tray menu are now fully translated in 10+ languages.
+- **Date display option:** You can now choose to show only the date or only the time (mutually exclusive).
+- **12/24 hour format:** Easily switch between 12-hour and 24-hour clock formats from the tray menu.
+- **Show seconds:** Option to display seconds in the clock, with smooth scrolling animation if enabled.
+- **Tray menu improvements:** Clock/date options are grouped and exclusive, with clear translations for all supported languages.
+- **Cleaner code:** Unused separator and redundant code removed for better performance and maintainability.

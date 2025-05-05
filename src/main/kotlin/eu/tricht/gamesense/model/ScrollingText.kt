@@ -28,10 +28,8 @@ data class ScrollingText(
     private var originalText = _text
 
     init {
-        if (_text.length > getMaxDisplayLength()) {
-            text = "$_text " + getSongSeparator()
-            originalText = "$_text "
-        }
+        text = _text
+        originalText = _text
     }
 
     private fun marquify(text: String): String {
@@ -43,9 +41,5 @@ data class ScrollingText(
 
     private fun getMaxDisplayLength(): Int {
         return if (preferences.get("songIcon", "true")!!.toBoolean()) 12 else 21
-    }
-
-    private fun getSongSeparator(): String {
-        return if (preferences.get("songSeparator", "false")!!.toBoolean()) "| " else ""
     }
 }

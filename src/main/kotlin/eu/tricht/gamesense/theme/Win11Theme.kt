@@ -6,6 +6,7 @@ import javax.swing.border.Border
 import javax.swing.border.CompoundBorder
 import javax.swing.border.EmptyBorder
 import javax.swing.border.LineBorder
+import javax.swing.Timer
 
 /**
  * Manages theme and component styles in Windows 11 style
@@ -33,6 +34,9 @@ object Win11Theme {
             "secondary" to Color(153, 153, 153)
         )
     )
+    
+    // Geçiş animasyonu süresi (ms)
+    private const val ANIMATION_DURATION = 100
     
     /**
      * Applies theme settings and appearance
@@ -131,16 +135,43 @@ object Win11Theme {
         component.addMouseListener(object : java.awt.event.MouseAdapter() {
             override fun mouseEntered(e: java.awt.event.MouseEvent) {
                 if (component.isEnabled) {
-                    component.background = hoverColor
+                    animateBackgroundColor(component, originalBackground, hoverColor)
                 }
             }
             
             override fun mouseExited(e: java.awt.event.MouseEvent) {
                 if (component.isEnabled) {
-                    component.background = originalBackground
+                    animateBackgroundColor(component, hoverColor, originalBackground)
                 }
             }
         })
+    }
+    
+    /**
+     * Animates color transition for smoother UI
+     */
+    private fun animateBackgroundColor(component: JComponent, fromColor: Color, toColor: Color) {
+        val timer = Timer(ANIMATION_DURATION / 5, null)
+        val steps = 5
+        var step = 0
+        
+        timer.addActionListener { e ->
+            step++
+            val ratio = step.toFloat() / steps
+            
+            val r = fromColor.red + ((toColor.red - fromColor.red) * ratio).toInt()
+            val g = fromColor.green + ((toColor.green - fromColor.green) * ratio).toInt()
+            val b = fromColor.blue + ((toColor.blue - fromColor.blue) * ratio).toInt()
+            
+            component.background = Color(r, g, b)
+            
+            if (step >= steps) {
+                timer.stop()
+                component.background = toColor
+            }
+        }
+        
+        timer.start()
     }
 }
 

@@ -60,7 +60,26 @@ object LanguageManager {
             "highlight_color" to "Highlight Color",
             "reset_to_default" to "Reset to Default",
             "save" to "Save",
-            "cancel" to "Cancel"
+            "cancel" to "Cancel",
+            "restart" to "Restart",
+            "check_updates" to "Check for Updates",
+            "update_message" to "You are using the latest version.",
+            "version" to "Version",
+            "light_theme" to "Light",
+            "dark_theme" to "Dark",
+            "dark_blue_theme" to "Dark Blue",
+            "dark_green_theme" to "Dark Green",
+            "dark_turquoise_theme" to "Dark Turquoise",
+            "turquoise_theme" to "Turquoise",
+            "custom_theme" to "Custom",
+            "system" to "System",
+            "other" to "Other",
+            "clock_options" to "Clock Options",
+            "show_date" to "Show date",
+            "show_seconds" to "Show seconds",
+            "clock_12h" to "12-hour format",
+            "clock_24h" to "24-hour format",
+            "show_time" to "Show time"
         )
         
         // Türkçe
@@ -100,7 +119,26 @@ object LanguageManager {
             "highlight_color" to "Vurgu Rengi",
             "reset_to_default" to "Varsayılana Sıfırla",
             "save" to "Kaydet",
-            "cancel" to "İptal"
+            "cancel" to "İptal",
+            "restart" to "Yeniden Başlat",
+            "check_updates" to "Güncellemeleri Kontrol Et",
+            "update_message" to "En güncel sürümü kullanıyorsunuz.",
+            "version" to "Sürüm",
+            "light_theme" to "Açık",
+            "dark_theme" to "Koyu",
+            "dark_blue_theme" to "Koyu Mavi",
+            "dark_green_theme" to "Koyu Yeşil",
+            "dark_turquoise_theme" to "Koyu Turkuaz",
+            "turquoise_theme" to "Turkuaz",
+            "custom_theme" to "Özel",
+            "system" to "Sistem",
+            "other" to "Diğer",
+            "clock_options" to "Saat Seçenekleri",
+            "show_date" to "Tarihi göster",
+            "show_seconds" to "Saniyeleri göster",
+            "clock_12h" to "12 saatlik format",
+            "clock_24h" to "24 saatlik format",
+            "show_time" to "Sadece saat göster"
         )
         
         // Almanca
@@ -140,7 +178,17 @@ object LanguageManager {
             "highlight_color" to "Highlight-Farbe",
             "reset_to_default" to "Auf Standard zurücksetzen",
             "save" to "Speichern",
-            "cancel" to "Abbrechen"
+            "cancel" to "Abbrechen",
+            "restart" to "Restart",
+            "check_updates" to "Check for Updates",
+            "update_message" to "You are using the latest version.",
+            "version" to "Version",
+            "clock_options" to "Clock Options",
+            "show_date" to "Show date",
+            "show_seconds" to "Show seconds",
+            "clock_12h" to "12-hour format",
+            "clock_24h" to "24-hour format",
+            "show_time" to "Show time"
         )
         
         // Fransızca
@@ -180,7 +228,17 @@ object LanguageManager {
             "highlight_color" to "Couleur de surbrillance",
             "reset_to_default" to "Réinitialiser par défaut",
             "save" to "Enregistrer",
-            "cancel" to "Annuler"
+            "cancel" to "Annuler",
+            "restart" to "Restart",
+            "check_updates" to "Check for Updates",
+            "update_message" to "You are using the latest version.",
+            "version" to "Version",
+            "clock_options" to "Clock Options",
+            "show_date" to "Show date",
+            "show_seconds" to "Show seconds",
+            "clock_12h" to "12-hour format",
+            "clock_24h" to "24-hour format",
+            "show_time" to "Show time"
         )
         
         // Çince
@@ -220,7 +278,17 @@ object LanguageManager {
             "highlight_color" to "高亮颜色",
             "reset_to_default" to "恢复默认",
             "save" to "保存",
-            "cancel" to "取消"
+            "cancel" to "取消",
+            "restart" to "Restart",
+            "check_updates" to "Check for Updates",
+            "update_message" to "You are using the latest version.",
+            "version" to "Version",
+            "clock_options" to "Clock Options",
+            "show_date" to "Show date",
+            "show_seconds" to "Show seconds",
+            "clock_12h" to "12-hour format",
+            "clock_24h" to "24-hour format",
+            "show_time" to "Show time"
         )
         
         // Japonca
@@ -260,7 +328,17 @@ object LanguageManager {
             "highlight_color" to "ハイライト色",
             "reset_to_default" to "デフォルトにリセット",
             "save" to "保存",
-            "cancel" to "キャンセル"
+            "cancel" to "キャンセル",
+            "restart" to "Restart",
+            "check_updates" to "Check for Updates",
+            "update_message" to "You are using the latest version.",
+            "version" to "Version",
+            "clock_options" to "Clock Options",
+            "show_date" to "Show date",
+            "show_seconds" to "Show seconds",
+            "clock_12h" to "12-hour format",
+            "clock_24h" to "24-hour format",
+            "show_time" to "Show time"
         )
         
         // Rusça
@@ -300,7 +378,17 @@ object LanguageManager {
             "highlight_color" to "Цвет выделения",
             "reset_to_default" to "Сбросить по умолчанию",
             "save" to "Сохранить",
-            "cancel" to "Отмена"
+            "cancel" to "Отмена",
+            "restart" to "Restart",
+            "check_updates" to "Check for Updates",
+            "update_message" to "You are using the latest version.",
+            "version" to "Version",
+            "clock_options" to "Clock Options",
+            "show_date" to "Show date",
+            "show_seconds" to "Show seconds",
+            "clock_12h" to "12-hour format",
+            "clock_24h" to "24-hour format",
+            "show_time" to "Show time"
         )
         
         // Portekizce
@@ -340,7 +428,17 @@ object LanguageManager {
             "highlight_color" to "Cor de destaque",
             "reset_to_default" to "Restaurar padrão",
             "save" to "Salvar",
-            "cancel" to "Cancelar"
+            "cancel" to "Cancelar",
+            "restart" to "Restart",
+            "check_updates" to "Check for Updates",
+            "update_message" to "You are using the latest version.",
+            "version" to "Version",
+            "clock_options" to "Clock Options",
+            "show_date" to "Show date",
+            "show_seconds" to "Show seconds",
+            "clock_12h" to "12-hour format",
+            "clock_24h" to "24-hour format",
+            "show_time" to "Show time"
         )
         
         // İtalyanca
@@ -380,7 +478,17 @@ object LanguageManager {
             "highlight_color" to "Colore evidenziato",
             "reset_to_default" to "Ripristina predefinito",
             "save" to "Salva",
-            "cancel" to "Annulla"
+            "cancel" to "Annulla",
+            "restart" to "Restart",
+            "check_updates" to "Check for Updates",
+            "update_message" to "You are using the latest version.",
+            "version" to "Version",
+            "clock_options" to "Clock Options",
+            "show_date" to "Show date",
+            "show_seconds" to "Show seconds",
+            "clock_12h" to "12-hour format",
+            "clock_24h" to "24-hour format",
+            "show_time" to "Show time"
         )
     }
     
